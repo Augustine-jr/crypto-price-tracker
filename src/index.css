@@ -1,0 +1,9 @@
+/* src/index.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+font-family: 'Satoshi', sans-serif;
+font-weight: 700;
+}
