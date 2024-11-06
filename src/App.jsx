@@ -1,11 +1,11 @@
 import React from 'react';
-import './index.css'; // Import your global CSS file for Tailwind
+import './index.css'; 
 import CryptoTable from './components/CryptoTable';
 
 function App() {
   return (
-    <div className=" bg-[#dcdcdc] flex items-center justify-center">
-      <div className="sm:w-[910px]  p-4">
+    <div className=" bg-[#dcdcdc] flex justify-center min-h-screen ">
+      <div className="sm:w-[910px]">
         <CryptoTable />
       </div>
     </div>
