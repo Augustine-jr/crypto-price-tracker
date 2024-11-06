@@ -14,6 +14,7 @@ const CryptoTable = () => {
   // State for storing coin data, loading status, and current page
   const [coins, setCoins] = useState([]); // Stores the list of coins fetched from the API
   const [loading, setLoading] = useState(true); // Tracks if data is still loading
+  const [error, setError] = useState(null);
   const [currentPage, setCurrentPage] = useState(1); // Tracks the current page for pagination
   const itemsPerPage = 10; // Defines the number of items to display per page
 
@@ -21,6 +22,8 @@ const CryptoTable = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
+           setLoading(true);
+          setError(null);
         const response = await axios.get('https://api.coinlore.net/api/tickers/');
         setCoins(response.data.data); // Store fetched data in the coins state
       } catch (error) {
